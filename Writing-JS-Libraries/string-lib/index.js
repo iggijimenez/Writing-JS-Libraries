@@ -19,7 +19,7 @@ function capitalizeWords(str) {
     return str.split(" ").map(word => capitalize(word)).join(" ")
 }
 
-// Challenge 4
+// Challenge 4 working on this
 
 function removeExtraSpaces(str) {
     const tStr =  str.trim()
@@ -34,4 +34,4 @@ function removeExtraSpaces(str) {
     // return str.replace(/\s+/g, '')
 }
 
-console.log(removeExtraSpaces("        hello           my name is iggi"))
+console.log(removeExtraSpaces("        hello          my name is iggi"))
