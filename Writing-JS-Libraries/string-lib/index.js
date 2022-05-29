@@ -37,6 +37,7 @@ function removeExtraSpaces(str) {
     // console.log(words)
 
 
+
     // if(!str.includes(" ")){          //checking weather array contain the id
     //     arr.push(" ");               //adding to array because value doesnt exists
     // }else{
@@ -46,4 +47,11 @@ function removeExtraSpaces(str) {
     // return str.replace(/\s+/g, '')
 }
 
-console.log(removeExtraSpaces("        hello          my name is iggi"))
+// Challenge 5
+
+function kebobCase(str) {
+    const tStr =  str.trim()
+    return tStr
+}
+
+console.log(kebobCase("        hello          my name is iggi"))
