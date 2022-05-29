@@ -22,15 +22,26 @@ function capitalizeWords(str) {
 // Challenge 4 working on this
 
 function removeExtraSpaces(str) {
-    const tStr =  str.trim()
-    const words =  tStr.split(" ")
-    console.log(words)
-
-    if(!str.includes(" ")){          //checking weather array contain the id
-        arr.push(" ");               //adding to array because value doesnt exists
-    }else{
-        arr.splice(arr.indexOf(" "), 1);  //deleting
+    const tStr =  str.trim() //this is removing the first and last empty spaces 
+    const words =  tStr.split(" ") // this splits the remaining words into each having its own index
+    // console.log(words)
+    for (word in words) {
+        if (word == " ") {
+            console.log(word)
+        } else {
+            console.log(word)
+        }
+        // console.log(words)
+        // words.join()
     }
+    // console.log(words)
+
+
+    // if(!str.includes(" ")){          //checking weather array contain the id
+    //     arr.push(" ");               //adding to array because value doesnt exists
+    // }else{
+    //     arr.splice(arr.indexOf(" "), 1);  //deleting
+    // }
 
     // return str.replace(/\s+/g, '')
 }
