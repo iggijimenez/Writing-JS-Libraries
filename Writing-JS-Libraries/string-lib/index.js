@@ -24,6 +24,7 @@ function capitalizeWords(str) {
 function removeExtraSpaces(str) {
     const tStr =  str.trim()
     const words =  tStr.split(" ")
+    console.log(words)
 
     if(!str.includes(" ")){          //checking weather array contain the id
         arr.push(" ");               //adding to array because value doesnt exists
