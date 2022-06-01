@@ -49,9 +49,51 @@ function removeExtraSpaces(str) {
 
 // Challenge 5
 
-function kebobCase(str) {
-    const tStr =  str.trim()
+function prekebobCase(str, cStr) {
+    var tStr =  str.trim()
+    tStr = tStr.toLowerCase()
+    tStr = tStr.split(" ")
+    tStr = tStr.join(cStr)
     return tStr
 }
 
-console.log(kebobCase("        hello          my name is iggi"))
+function kebobCase(str) {
+    tStr = prekebobCase(str, "-")
+    return tStr
+}
+
+// Challenge 6
+
+function snakeCase(str) {
+    tStr = prekebobCase(str, "_")
+    return tStr
+}
+
+
+// Challenge 7
+
+function camelCase(str) {
+    var tStr = str.split(" ")
+    tStr = tStr.map(word => capitalize(word)).join("")
+    var pStr = tStr[0].toLowerCase() // lowercases the first letter of the sentence
+    tStr = tStr.split(tStr[0]) // splits the word after the first letter
+    const eStr = pStr + tStr.join("") // concantes the lowercase letter with the spit second part while joining the it
+    return eStr
+}
+
+// Challenge 8
+
+function shift(str) {
+    var tStr = str.split("")
+    tStr = tStr.map(word => word).join("")
+    var pStr = tStr[0] // grabs the first character
+    tStr = tStr.split(tStr[0]) // splits the word after the first letter
+    const eStr = tStr.join("") + pStr // concantes the lowercase letter with the spit second part while joining the it
+    return eStr
+}
+
+// Challenge 9
+
+
+console.log(shift("Ignacio Jimenez"))
+
