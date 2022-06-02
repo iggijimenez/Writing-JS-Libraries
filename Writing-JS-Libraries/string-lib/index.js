@@ -94,6 +94,14 @@ function shift(str) {
 
 // Challenge 9
 
+function makeHastTag(str) {
+    var tStr = str.split("")
+    console.log(tStr.length)
+    for (word in tStr) {
+        console.log(word)
+        console.log(word.length)
+    }
+}
 
-console.log(shift("Ignacio Jimenez"))
 
+console.log(makeHastTag("Ignacio Jimenez"))
