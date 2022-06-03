@@ -103,5 +103,4 @@ function makeHastTag(str) {
     }
 }
 
-
 console.log(makeHastTag("Ignacio Jimenez"))
