@@ -103,4 +103,12 @@ function makeHastTag(str) {
     }
 }
 
-console.log(makeHastTag("Ignacio Jimenez"))
+const ages = [10, 13, 16, 14];
+
+console.log(ages.every(checkAge))
+
+function checkAge(age) {
+    return age < 18;
+  }
+
+// console.log(makeHastTag("Ignacio Jimenez"))
