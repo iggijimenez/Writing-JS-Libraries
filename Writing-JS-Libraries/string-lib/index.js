@@ -58,7 +58,7 @@ function snakeCase(str) {
 
 function camelCase(str) {
     var tStr = str.split(" ")
-    const tStr = tStr.map(word => capitalize(word)).join("")
+    tStr = tStr.map(word => capitalize(word)).join("")
     var pStr = tStr[0].toLowerCase() // lowercases the first letter of the sentence
     tStr = tStr.split(tStr[0]) // splits the word after the first letter
     const eStr = pStr + tStr.join("") // concantes the lowercase letter with the spit second part while joining the it
@@ -87,14 +87,21 @@ function makeHastTag(str) {
     }
 }
 
-const ages = [10, 13, 16, 14];
+console.log(shift("Mitchell"))
 
-// console.log(ages.every(checkAge))
+// Challenge 10
 
-function checkAge(age) {
-    if (age < 18){
-        console.log("yes")
-    }
-  }
+function isEmpty(str) {
+    const tStr = str.split("")
 
-console.log(shift("samuel madrigal"))
+    const emptyCharacter = (currentValue) => currentValue == " "
+    return tStr.every(emptyCharacter)
+}
+
+
+module.exports = {
+    capitalize, allCaps, capitalizeWords, removeExtraSpaces, kebobCase, snakeCase, camelCase, shift, makeHastTag, isEmpty
+}
+
+
+
