@@ -1,4 +1,4 @@
-const {capitalize, allCaps, capitalizeWords, removeExtraSpaces, kebobCase, snakeCase, camelCase, shift, makeHastTag, isEmpty} = require("./index.js")
+const {capitalize, allCaps, capitalizeWords, removeExtraSpaces, kebobCase, snakeCase, camelCase, shift, makeHashTag, isEmpty} = require("./index.js")
 
 test("testing capitalize", () => {
     expect(capitalize("ignacio")).toBe("Ignacio")
@@ -28,13 +28,14 @@ test("testing camelCase", () => {
     expect(camelCase("Ignacio Jimenez")).toBe("ignacioJimenez")
 })
 
-
 test("testing shift", () => {
     expect(shift("Ignacio")).toBe("gnacioI")
 })
 
-test("testing makeHasTag", () => {
-    expect(makeHastTag("Ignacio")).toBe("#Ignacio")
+test("testing makeHashTag", () => {
+    const arr = makeHashTag("Hello my name is ignacio and I am taking JS")
+    expect(arr.length).toBe(3)
+    expect(arr).toEqual(["#ignacio", "#taking", "#Hello"])
 })
 
 test("testing isEmpty", () => {

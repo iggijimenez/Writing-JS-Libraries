@@ -78,16 +78,16 @@ function shift(str) {
 
 // Challenge 9
 
-function makeHastTag(str) {
-    var tStr = str.split("")
-    console.log(tStr.length)
-    for (word in tStr) {
-        console.log(word)
-        console.log(word.length)
-    }
+function makeHashTag(str) {
+    const tStr = str.split(" ")
+
+    tStr.sort((a, b) => b.length - a.length )
+    const nArr = tStr.slice(0, 3).map((str) => "#" + str )
+
+    return nArr
 }
 
-console.log(shift("Mitchell"))
+console.log(makeHashTag("i am a very lonnng worrrd"))
 
 // Challenge 10
 
@@ -100,7 +100,7 @@ function isEmpty(str) {
 
 
 module.exports = {
-    capitalize, allCaps, capitalizeWords, removeExtraSpaces, kebobCase, snakeCase, camelCase, shift, makeHastTag, isEmpty
+    capitalize, allCaps, capitalizeWords, removeExtraSpaces, kebobCase, snakeCase, camelCase, shift, makeHashTag, isEmpty
 }
 
 
