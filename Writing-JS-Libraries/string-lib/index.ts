@@ -24,9 +24,9 @@ function capitalizeWords(str) {
 
 // Challenge 4 working on this
 
-function removeExtraSpaces(str) { //["Ignacio", "", "", "", "JImenez"]
-    const tStr =  str.trim() //this is removing the first and last empty spaces 
-    const words =  tStr.split(" ") // this splits the remaining words into each having its own index
+function removeExtraSpaces(str) { //["Ignacio", "", "", "", "Jimenez"]
+    const tStr = str.trim() //this is removing the first and last empty spaces 
+    const words = tStr.split(" ") // this splits the remaining words into each having its own index
     // console.log(words, "*")
 
     const isEmpty = words.filter(word => "" != word)
@@ -37,7 +37,7 @@ function removeExtraSpaces(str) { //["Ignacio", "", "", "", "JImenez"]
 // Challenge 5
 
 function prekebobCase(str, cStr) {
-    var tStr =  str.trim()
+    var tStr = str.trim()
     tStr = tStr.toLowerCase()
     tStr = tStr.split(" ")
     tStr = tStr.join(cStr)
@@ -83,8 +83,8 @@ function shift(str) {
 function makeHashTag(str) {
     const tStr = str.split(" ")
 
-    tStr.sort((a, b) => b.length - a.length )
-    const nArr = tStr.slice(0, 3).map((str) => "#" + str )
+    tStr.sort((a, b) => b.length - a.length)
+    const nArr = tStr.slice(0, 3).map((str) => "#" + str)
 
     return nArr
 }
