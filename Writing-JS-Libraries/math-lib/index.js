@@ -33,7 +33,9 @@ Number.prototype.ceil = function () {
 // Challenge 3
 
 function pads(x, y) {
-    return x + y
+    var s = x +"";
+    while (s.length < y) s = "0" + s;
+    return s;
 }
 
 Number.prototype.pads = function () {
