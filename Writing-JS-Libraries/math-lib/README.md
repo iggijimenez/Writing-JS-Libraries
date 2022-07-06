@@ -4,7 +4,7 @@
 
 ## Installation
 
-npm i @iggijimenez/string-lib
+
 
 ---
 
@@ -19,86 +19,84 @@ npm i @iggijimenez/string-lib
 ### Number Methods
 ---
 ## round()
-#### returns input string with all capital characters
+#### rounds to the nearest whole number
 
 ```js
-allCaps("iphone");    
-  // returns "IPHONE"
+9.50.round();    
+  // returns 10
 ```
 
-## capitalizeWords()
-#### returns input string with first character of each word capitalized
+## floor()
+#### goes to the nearest lowest whole number
 
 ```js
-capitalizeWords("javascript is fun to learn");  
-  // returns "Javascript Is Fun To Learn"
+9.50.floor()
+  // returns 9
 ```
 
-## removeExtraSpaces()
-#### returns input string with empty space trimmed from beginning and end,
-#### and removes any empty characters more than one space
+## ceil()
+#### returns the highest nearest whole number
 
 ```js
-removeExtraSpaces("    this is a typo    ");  
-  // returns "this is a typo"
+9.4.ceil() 
+  // returns 10
 ```
 
 
-## kebobCase()
-#### returns input string with dashes instead of spaces
-#### output is all lowercase, and without extra spaces
+## pad()
+#### returns pads Number with x 0s before, and y 0s after
 
 ```js
-kebobCase("my project name");  
-  // returns "my-project-name"
+1.1.pad(4, 4);  
+  // returns 0001.1000
 ```
 
-## snakeCase()
-#### returns input string with underscores instead of spaces
-#### output is all lowercase, and without extra spaces
+## degToRad()
+#### returns a convertion from degrees to radians
 
 ```js
-snakeCase("my function name");  
-  // returns "my_function_name"
+degToRad(45);  
+  // returns 0.785
 ```
 
-## camelCase()
-### returns input string with no spaces
-#### each word's first character is capitalized EXCLUDING the first word
+## radToDeg()
+### Coverts radians to degrees.
 
 ```js
-camelCase("my variable name");  
-  // returns "myVariableName"
+readToDeg(0.785);  
+  // returns 44.977
 ```
 
-## shift()
-#### returns input string with first character shifted to back
+## toDollars()
+#### returns input formatting money is a common task for software projects. A function could save you time in the future. The goal of this function is to take a numeric value and return a string beginning with a '$' and rounded to two decimal places
 
 ```js
-shift("qwerty");  
-  // returns "wertyq"
+toDollars(10);  
+  // returns $10.00
 ```
 
-## makeHashTag()
-#### returns list of three longest words in input string as hashtags
-#### if string is three words or less, all words will be returned as hashtags
-#### output is a list of all lowercase terms, beginning with "#"
+## tax(rate)
+#### Returns the tax amount
 
 ```js
-makeHashTag("cooking food is one of my favorite things");  
-  // returns [ "#favorite", "#cooking", "#things" ]
+tax(10);  
+  // returns 10.10
 ```
 
-## isEmpty()
-#### returns true if input string is empty
-#### an empty string contains only whitespace
+## interest(total, year, rate)
+#### returns the calculation with the interest over time
 
 ```js
-isEmpty("       ");  
-  // returns true
+interest(10, 10, 8)
+  // returns 21.58
+```
 
-isEmpty(" :) ");  
-  // returns false
+## mortage(principal, numberOfPayments, interestRate))
+#### returns the calculation of a mortage
+
+```js
+mortage(10, 10, 8)
+  // returns 100.00000046650739
 ```
 
 
