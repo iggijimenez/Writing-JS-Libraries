@@ -1,3 +1,18 @@
+module.exports = {
+    goldenRatio: goldenRatio,
+    round: round,
+    floor: floor,
+    ceil: ceil,
+    pads: pads,
+    degToRad: degToRad,
+    radToDeg: radToDeg,
+    toDollars: toDollars,
+    tax: tax,
+    interest: interest,
+    mortage: mortage
+};
+
+
 // Challange 1 Golden Ratio
 
 function goldenRatio() {
@@ -7,7 +22,7 @@ function goldenRatio() {
 // Challenge 2 Number Methods
 
 function round(x) {
-    return Math.floor(x)
+    return Math.round(x)
 }
 
 Number.prototype.round = function () {
@@ -32,14 +47,18 @@ Number.prototype.ceil = function () {
 
 // Challenge 3
 
-function pads(x, y) {
-    var s = x +"";
-    while (s.length < y) s = "0" + s;
-    return s;
+function pads(numb, left, right) {
+    const numStr = numb.toString()
+    const splitted = numStr.split(".");
+
+    const leftStr = splitted[0].padStart(left, "0")
+    const rightStr = splitted[1].padEnd(right, "0")
+
+    return leftStr + "." + rightStr
 }
 
-Number.prototype.pads = function () {
-    return ceil(this)
+Number.prototype.pads = function (left, right) {
+    return pads(this, left, right)
 }
 
 // Challenge 4

@@ -1,12 +1,15 @@
 {
   "name": "@iggijimenez/math-lib",
   "version": "1.0.0",
-  "description": "",
+  "description": "Challenge 1 GoldenRatio - Add a new property to Number that is the Golden Ratio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.2"
+  }
 }
