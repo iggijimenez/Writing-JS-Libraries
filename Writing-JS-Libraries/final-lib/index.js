@@ -1,3 +1,7 @@
+module.exports = {
+    suffix: suffix
+}
+
 // Challenge 1
 
 function suffix(numo) {
