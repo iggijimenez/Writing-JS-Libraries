@@ -1,6 +1,6 @@
 {
   "name": "@iggijimenez/math-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Challenge 1 GoldenRatio - Add a new property to Number that is the Golden Ratio",
   "main": "index.js",
   "scripts": {
