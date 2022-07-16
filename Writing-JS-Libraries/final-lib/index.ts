@@ -1,10 +1,5 @@
-module.exports = {
-    suffix: suffix
-}
 
-// Challenge 1
-
-function suffix(numo) {
+function suffix(numo: number):string {
     const splits = numo.toString().split("")
     const lastItem = splits[splits.length - 1]
     const secondItem = splits[splits.length - 2]
