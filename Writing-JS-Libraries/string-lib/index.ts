@@ -4,7 +4,7 @@ module.exports = {
 
 // Challenge 1
 
-function capitalize(str) {
+function capitalize(str:string):string {
     const first = str[0].toUpperCase()
     const second = str.slice(1)
     return first + second
@@ -12,19 +12,19 @@ function capitalize(str) {
 
 // Challenge 2
 
-function allCaps(str) {
+function allCaps(str:string):string {
     return str.toUpperCase()
 }
 
 // Challenge 3
 
-function capitalizeWords(str) {
+function capitalizeWords(str:string):string {
     return str.split(" ").map(word => capitalize(word)).join(" ")
 }
 
 // Challenge 4 working on this
 
-function removeExtraSpaces(str) { //["Ignacio", "", "", "", "Jimenez"]
+function removeExtraSpaces(str:string):string { //["Ignacio", "", "", "", "Jimenez"]
     const tStr = str.trim() //this is removing the first and last empty spaces 
     const words = tStr.split(" ") // this splits the remaining words into each having its own index
     // console.log(words, "*")
@@ -36,29 +36,32 @@ function removeExtraSpaces(str) { //["Ignacio", "", "", "", "Jimenez"]
 
 // Challenge 5
 
-function prekebobCase(str, cStr) {
-    var tStr = str.trim()
+function prekebobCase(test:string, cStr:string):string{
+    let tStr = test.trim()
+    console.log(tStr)
     tStr = tStr.toLowerCase()
     tStr = tStr.split(" ")
     tStr = tStr.join(cStr)
     return tStr
 }
 
-function kebobCase(str) {
+
+
+function kebobCase(str:string):string {
     const tStr = prekebobCase(str, "-")
     return tStr
 }
 
 // Challenge 6
 
-function snakeCase(str) {
+function snakeCase(str:string):string {
     const tStr = prekebobCase(str, "_")
     return tStr
 }
 
 // Challenge 7
 
-function camelCase(str) {
+function camelCase(str:string):string {
     var tStr = str.split(" ")
     tStr = tStr.map(word => capitalize(word)).join("")
     var pStr = tStr[0].toLowerCase() // lowercases the first letter of the sentence
@@ -69,7 +72,7 @@ function camelCase(str) {
 
 // Challenge 8
 
-function shift(str) {
+function shift(str:string):string {
     var tStr = str.split("")
     tStr = tStr.map(word => word).join("")
     var pStr = tStr[0] // grabs the first character
@@ -80,7 +83,7 @@ function shift(str) {
 
 // Challenge 9
 
-function makeHashTag(str) {
+function makeHashTag(str:string):string[] {
     const tStr = str.split(" ")
 
     tStr.sort((a, b) => b.length - a.length)
@@ -91,7 +94,7 @@ function makeHashTag(str) {
 
 // Challenge 10
 
-function isEmpty(str) {
+function isEmpty(str:string):boolean {
     const tStr = str.split("")
 
     const emptyCharacter = (currentValue) => currentValue == " "
